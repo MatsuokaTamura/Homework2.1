@@ -15,18 +15,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quV-dF-3Xl">
+                                <rect key="frame" x="117" y="75" width="180" height="180"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="quV-dF-3Xl" secondAttribute="height" multiplier="1:1" id="yB7-0w-TJ3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GcV-DK-IyM">
+                                <rect key="frame" x="117" y="280" width="180" height="180"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GcV-DK-IyM" secondAttribute="height" multiplier="1:1" id="gY7-ZO-XPy"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVV-1n-l2v">
+                                <rect key="frame" x="117" y="485" width="180" height="180"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LVV-1n-l2v" secondAttribute="height" multiplier="1:1" id="5Pz-zu-RX9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTL-Su-LR8">
+                                <rect key="frame" x="160" y="732" width="94" height="52"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Start">
+                                            <attributes>
+                                                <font key="NSFont" size="33" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" systemColor="systemGray5Color"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="StartButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="kIw-v5-zNv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="GcV-DK-IyM" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.200893" id="Dbr-eG-yUC"/>
+                            <constraint firstItem="quV-dF-3Xl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.200893" id="KrS-CB-sle"/>
+                            <constraint firstItem="pTL-Su-LR8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="L8t-Lb-fa7"/>
+                            <constraint firstItem="quV-dF-3Xl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="M8Q-xA-bAz"/>
+                            <constraint firstItem="GcV-DK-IyM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VaB-08-DeD"/>
+                            <constraint firstItem="quV-dF-3Xl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VbM-QX-lZR"/>
+                            <constraint firstItem="LVV-1n-l2v" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.200893" id="cj5-Kc-Ulp"/>
+                            <constraint firstItem="LVV-1n-l2v" firstAttribute="top" secondItem="GcV-DK-IyM" secondAttribute="bottom" constant="25" id="dVD-2o-CeK"/>
+                            <constraint firstItem="GcV-DK-IyM" firstAttribute="top" secondItem="quV-dF-3Xl" secondAttribute="bottom" constant="25" id="mar-sA-AqZ"/>
+                            <constraint firstItem="LVV-1n-l2v" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rRE-mk-CtM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pTL-Su-LR8" secondAttribute="bottom" constant="78" id="vSG-Et-vRX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="GreenLightView" destination="LVV-1n-l2v" id="57I-80-eMB"/>
+                        <outlet property="RedLightView" destination="quV-dF-3Xl" id="AZk-HV-ahg"/>
+                        <outlet property="StartButton" destination="pTL-Su-LR8" id="UAp-bs-3U4"/>
+                        <outlet property="YellowLightView" destination="GcV-DK-IyM" id="fjy-sK-7c7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="94"/>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
